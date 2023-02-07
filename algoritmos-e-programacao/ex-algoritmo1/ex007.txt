@@ -1,0 +1,106 @@
+	ALGORITMO I
+
+ex 7) Exercícios: Utilize apenas a estrutura “Repita até”
+
+a) Elabore um algoritmo representando sua saída de casa pela manhã 
+i) Inicie pelo passo “dormindo na cama”. Inclua as atividades matinais normais 
+	1- dormindo na cama até:
+		acordar com barulho do alarme;
+	2- colocar os pés ao lado esquerdo da cama até:
+		firma-los no chão;
+	3- levantar;
+	4- andar para frente até:
+		alcançar a porta;
+	5- esticar o braço direito até:
+		segeruar a maçaneta;
+	5- girar a maçaneta à esquerda até:
+		deixar a porta livre;
+	6- puxar a aporta em sua direção até:
+		deixa-la aberta de maneira a passar seu corpo;
+	7- soltar a maçaneta;
+		
+
+b) Elabore um algoritmo para trocar um pneu furado. 
+i) Admita que estão disponíveis um macaco, chave de roda, e pneu “bom”. O macaco 
+está abaixado, o carro está parado e o triângulo já foi colocado 
+	1- ir em direção ao porta malas até:
+		alcançar a maçaneta;
+	2- segurar a maçaneta com uma das maos
+	3- puxar a maçaneta até:
+		destravar o porta malas;
+	4- soltar a maçaneta;
+	5- econtrar o pneu reserva, a chave de roda e o macaco;
+	5- pegar a chave de roda com uma das maos;
+	6- circular o veículo até:
+		encontrar o pneu furado;
+	7- aproximar a chave de roda a um dos parafusos da roda até:
+		encaixar a chave;
+	8- enquanto o parafuso estiver bem fixado:
+		girar a chave no sentido anti-horario até:
+			afrouxar o parafuso;
+	9- verificar se todos os parafusos estão frouxos:
+		se algum não estiver:
+			voltar ao passo 8;
+	10- deixar a chave de roda à esquerda do pneu furado;
+	11- circule o veículo até:
+		aproximar-se do porta mala;
+	12- pegue uma ou as duas maos o macaco localizado anteriormente;
+	13- circule o veículo até:
+		aproximar-se do pneu furado;
+	14- sente-se no chao;
+	15- olhe para baixo do veículo até:
+		encontrar o ponto de fixação do macaco;
+	16- levar o macaco em direçao ao ponto encontrado até:
+		coloca-lo na posicao correta;
+	17- pegar a chave de roda deixada no passo 10;
+	18- leva-la em direção ao macaco até:
+		encaixa-la no macaco;
+	19- girar a chave de roda no sentido horario até:
+		levantara o carro até que o pneu furado perca o contato com o solo;
+	20- tirar a chave de roda do macaco;
+	21- levantar-se;
+	22- aproximar a chave de roda a um dos parafusos da roda até:
+		encaixar a chave;
+	23- girar a chave de roda no sentido anti horario até:
+		remover o parafuso;
+	24- verificar se todos os parafusos foram removidos:
+		se algum não foi rermovido:
+			retornar ao passo 22;
+	25- deixar a chave na frente do macaco;
+	26- aproximar as duas maos do pneu furado até:
+		segura-lo firmemente;
+	27- puxar o pneu até:
+		removê-lo do carro;
+	28- deixar o peneu à esquerda da chave de roda;
+	29- circule o veículo até:
+		aproximar-se do porta mala;
+	30- aproxime as duas maos ao novo pneu até:
+		fixa-lo firmemente;
+	31- remover o novo pneu do porta mala;
+	32- circule o veículo até:
+		aproximar-se de onde o pneu furado foi rermovido;
+	
+		
+	
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+c) Elabore um algoritmo para fazer pipoca numa panela de fogão 
+i) Admita que estão disponíveis todos os ingredientes, fogão a gás e fósforo 
+d) Desenvolva um algoritmo para substituir um vidro quebrado de uma janela 
+i) Em uma lista à parte, descreva os materiais utilizados 
+e) Elabore um algoritmo para ir de ônibus de um ponto a outro dentro da cidade 
+i) Admita que está em um ponto, que paga em dinheiro e deve receber troco 
+f) Elabore um algoritmo para realizar uma chamada de telefone fixo 
+i) Admita que é um telefone fixo, funcionando perfeitamente; você está próximo dele, 
+e não repetirá a ligação se o telefone estiver ocupado ou não atender
