@@ -21,19 +21,14 @@ main(){
 	
 	if(pergunta == 1){
 		res = n1 * n2;
-		printf("\n\no resultado da multiplicacao e: %i\n\n", res);
+		printf("\n\n o resultado da multiplicacao e: %i\n\n", res);
 	}else{
 		res = n1 + n2;
-		printf("\n\no resultado da multiplicacao e: %i\n\n", res);
+		printf("\n\n o resultado da multiplicacao e: %i\n\n", res);
 	}
 	
 	
-
-	
-	
-	
 	system("pause"); //sempre usar o ssystem("pause")
-	return 0;
 }
 
 
