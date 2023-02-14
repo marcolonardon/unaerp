@@ -13,7 +13,7 @@ main(){
 	
 	media = pParcial * 0.4 + pFinal * 0.6;
 	
-	printf("\nA meida final e: %.1f\n\n", media);
+	printf("\nA meida final e: %.2f\n\n", media);
 	
 	
 	system("pause");
