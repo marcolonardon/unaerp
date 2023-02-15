@@ -1,4 +1,4 @@
-//calcular mdeia final
+//calcular media final
 //M= pParcial * 0.4 + pFinal * 0.6
 
 #include <stdio.h>
@@ -13,7 +13,7 @@ main(){
 	
 	media = pParcial * 0.4 + pFinal * 0.6;
 	
-	printf("\nA meida final e: %.2f\n\n", media);
+	printf("\nA media final e: %.2f\n\n", media);
 	
 	
 	system("pause");
