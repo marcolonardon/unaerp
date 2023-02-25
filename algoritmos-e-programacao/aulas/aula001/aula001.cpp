@@ -28,7 +28,7 @@ main(){
 	}
 	
 	
-	system("pause"); //sempre usar o ssystem("pause")
+	system("pause"); //sempre usar o system("pause")
 }
 
 
