@@ -7,7 +7,7 @@ Caso a base e a altura sejam ambas negativas, imprimir mensagem e nao calcular a
 #include <stdio.h>
 
 float base, h, area;
-int flag;
+int flag=0;
 
 main(){
 	printf("Insira o valor da base do triangulo: ");
@@ -15,12 +15,22 @@ main(){
 	printf("\nInsira o valor da altura do triangulo: ");
 	scanf("%f", &h);
 	
-	if (h < 0){
-		area = (base*h)/2;
-		printf("\nA area de um triangulo de base: %.2f e altura: %.2f eh %.2f\n\n", base, h, area);
+	if (base < 0){
+		flag ++;	
 	}
-	
-	
+	if (h < 0){
+		flag ++;
+	}
+	if (flag > 0){
+		if (flag == 2){
+			printf("\nERRO! Base e altura negativas.\n\n");
+		}else{
+			printf("\nERRO! Base negativa.\n\n");
+		}
+	}else{
+		area = (base*h)/2;
+		printf("\nBase   = %.2f\nAltura = %.2f\nArea   = %.2f\n\n", base, h, area);
+	}
 	
 	system("pause");
 }
