@@ -19,13 +19,15 @@ main(){
 		flag ++;	
 	}
 	if (h < 0){
-		flag ++;
+		flag = flag -10;
 	}
-	if (flag > 0){
-		if (flag == 2){
+	if (flag != 0){
+		if (flag == -9){
 			printf("\nERRO! Base e altura negativas.\n\n");
-		}else{
+		}else if(flag == 1){
 			printf("\nERRO! Base negativa.\n\n");
+		}else if (flag == -10){
+			printf("\nERRO! Altura negativa.\n\n");
 		}
 	}else{
 		area = (base*h)/2;

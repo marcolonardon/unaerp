@@ -15,9 +15,9 @@ main(){
 	scanf("%f", &h);
 	
 	if (base < 0 && h < 0){
-		printf("\nBase e altura negativas, nao e possivel calcular a area.\n\n");
+		printf("\nERRO! Base e altura negativas.\n\n");
 	}else if(base < 0 && h > 0){
-		printf("\nBase negativa, nao e possivel calcular a area.\n\n");
+		printf("\nERRO! Base negativa.\n\n");
 	}else if(base > 0 && h < 0){
 		printf("\nAltura negativa, nao e possivel calcular a area.\n\n");
 	}else{
