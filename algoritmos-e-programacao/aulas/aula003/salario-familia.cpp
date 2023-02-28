@@ -15,12 +15,12 @@
  	scanf("%i", &filhos);
  	
  	if(salario <= 806.8){
- 		sfamilia = salario + filhos*41.37;
-		printf("\nSalario familia: R$ %.2f\n", sfamilia);		
+ 		sfamilia = salario + filhos*41.37;	
 	}else{
 		sfamilia = salario + filhos*29.16;
-		printf("\nSalario familia: R$ %.2f\n", sfamilia); 	
 	}
+	
+	printf("\nSalario familia: R$ %.2f\n", sfamilia); 	
 	 
  	system("pause");
  }
