@@ -15,14 +15,14 @@ main(){
 	scanf("%f", &h);
 	
 	if (base < 0 && h < 0){
-		printf("\nBase e altura negativas, nao e possivel calcular a area.\n");
+		printf("\nBase e altura negativas, nao e possivel calcular a area.\n\n");
 	}else if(base < 0 && h > 0){
-		printf("\nBase negativa, nao e possivel calcular a area.\n");
+		printf("\nBase negativa, nao e possivel calcular a area.\n\n");
 	}else if(base > 0 && h < 0){
-		printf("\nAltura negativa, nao e possivel calcular a area.\n");
+		printf("\nAltura negativa, nao e possivel calcular a area.\n\n");
 	}else{
 		area = (base*h)/2;
-		printf("\nA area de um triangulo de base: %.2f e altura: %.2f eh %.2f\n", base, h, area);
+		printf("\nA area de um triangulo de base: %.2f e altura: %.2f eh %.2f\n\n", base, h, area);
 	}
 	
 	system("pause");
