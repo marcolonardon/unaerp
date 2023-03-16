@@ -1,12 +1,12 @@
-/*A Secretaria do Meio Ambiente mantém três listas de indústrias conhecidas por serem altamente poluentes da atmosfera.
-Os resultados de várias medidas são combinados para formar o que é chamado de “índice de poluição”. Isto é controlado regularmente.
+/*A Secretaria do Meio Ambiente mantï¿½m trï¿½s listas de indï¿½strias conhecidas por serem altamente poluentes da atmosfera.
+Os resultados de vï¿½rias medidas sï¿½o combinados para formar o que ï¿½ chamado de ï¿½ï¿½ndice de poluiï¿½ï¿½oï¿½. Isto ï¿½ controlado regularmente.
 Normalmente os valores caem entre .05 e .25 (Bom). 
 
-Se o valor atingir .30 (Ruim), as indústrias da lista A serão chamadas a suspender as operações até que os valores retornem ao intervalo normal.
-Se o índice atingir .40 (Péssimo), as indústrias da lista B serão notificadas também.
-Se o índice exceder .50 (Crítico), indústrias de todas as três listas serão avisadas para suspenderem as atividades.
+Se o valor atingir .30 (Ruim), as indï¿½strias da lista A serï¿½o chamadas a suspender as operaï¿½ï¿½es atï¿½ que os valores retornem ao intervalo normal.
+Se o ï¿½ndice atingir .40 (Pï¿½ssimo), as indï¿½strias da lista B serï¿½o notificadas tambï¿½m.
+Se o ï¿½ndice exceder .50 (Crï¿½tico), indï¿½strias de todas as trï¿½s listas serï¿½o avisadas para suspenderem as atividades.
 
-Preparar um algoritmo para ler o índice de poluição e indicar as notações apropriadas.
+Preparar um algoritmo para ler o ï¿½ndice de poluiï¿½ï¿½o e indicar as notaï¿½ï¿½es apropriadas.
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,5 +25,5 @@ main(){
 	}else
 		printf("\nIndice dentro do aceitavel. \n\n");
 
-system("pause");	
+	system("pause");	
 }
