@@ -23,6 +23,7 @@ void loop(){
                 delay(550);
                 tone(piezo, 888);
                 delay(300);
+              	status_inter=digitalRead(inter);
             }
         }
     }else{
