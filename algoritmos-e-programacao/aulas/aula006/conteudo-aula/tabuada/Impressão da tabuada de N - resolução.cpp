@@ -1,4 +1,4 @@
-// Algoritmo para imprimir a tabuada de um número N lido
+// Algoritmo para imprimir a tabuada de um nï¿½mero N lido
 
 #include <stdio.h>
 #include <stdlib.h>
