@@ -29,5 +29,6 @@ main(){
 	}
 	
 	printf("Pontos internos: %i\n\n", interno);
+	system ("pause");
 	
 }
