@@ -16,9 +16,6 @@ CODIGO  NOME  PARCIAL  EXAME  MEDIA FALTAS  STATUS
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string>
-
-using namespace std;
 
 struct dados_alunos{
     char nome[100];
