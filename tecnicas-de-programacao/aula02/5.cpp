@@ -3,42 +3,59 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-const int MAX = 30;
-int i = 0;
+const int MAX = 3;
+int i = -1, op;
 
-char array[MAX];
-void adicionar(){
-	int op, valor;
-//	system("cls");
-	printf("1) Adicionar\n2) Remover\nSelecione uma opcao: ");
-	scanf("%i", &op);
-	switch (op){
-		case 1: 
-			printf("\nQual valor deseja adicinar? ");
-			scanf("%i", &valor);
-			array[i] = valor;
-			i++;
-			break;
-		case 2: 
-			for(int i2=0; i2 <= i; i2++){
-				printf("%i ", array[i2]);
-			}
-			
-			break;
-		defaut:
-			break;
-		
+int array[MAX];
+
+void imprimir(){
+	system("cls");
+	if (i == -1){
+		printf("\nNenhum valor foi adicionado.\n");
+	}
+	else{
+		printf("Sequencia: ");
+		for (int i2 = 0; i2 <= i; i2++){
+			printf("%i ", array[i2]);
+		}
 	}
 }
-void imprimir (){
-	
+
+void adicionar(){
+	int valor;
+	printf("\nValores adicionados: %i de %i\n\n1) Adicionar\n2) Listar\n3) Sair\nSelecione uma opcao: ", i + 1, MAX);
+	scanf("%i", &op);
+	switch (op){
+	case 1:
+		if(i+1 == MAX){
+			system("cls");
+			printf("\nLimite de valores atingido.");
+		}else{
+			i++;
+			printf("\nValor a ser adicionado: ");
+			scanf("%i", &valor);
+			array[i] = valor;
+		}
+		
+		break;
+	case 2:
+		imprimir();
+		break;
+	case 3:
+		break;
+	defaut:
+		printf("\nSelecione um valor valido\n");
+		break;
+	}
 }
 
 int main(){
-	
-	
 	do{
-		imprimir();
-	}while(1);
-	
+		adicionar();
+
+		if (op == 3){
+			break;
+		}
+
+	} while (true);
 }
