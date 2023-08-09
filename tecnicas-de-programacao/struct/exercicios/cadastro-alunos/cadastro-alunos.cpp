@@ -76,7 +76,7 @@ void listar_alunos(){
         float media = calcular_media(alunos[i].nota_parcial, alunos[i].nota_exame);
         const char* situacao = condicao_final(media, alunos[i].faltas);
 
-        printf("%i\t%s\t%.2f\t%.2f\t%.2f\t%i\t%s\t\n", alunos[i].codigo, alunos[i].nome, alunos[i].nota_parcial, alunos[i].nota_exame, media, alunos[i].faltas, situacao);
+        printf("%i\t%s\t%.1f\t%.1f\t%.1f\t%i\t%s\t\n", alunos[i].codigo, alunos[i].nome, alunos[i].nota_parcial, alunos[i].nota_exame, media, alunos[i].faltas, situacao);
 
     }
     
@@ -92,14 +92,18 @@ int main(){
 
         switch (opcao){
         case 1:
+            system("cls");
             adicionar_alunos();
+            system("cls");
             break;
 
         case 2:
+            system("cls");
             listar_alunos();
             break;
 
         case 3:
+            system("cls");
             printf("Finalizando programa.\n\n");
             break;
         
