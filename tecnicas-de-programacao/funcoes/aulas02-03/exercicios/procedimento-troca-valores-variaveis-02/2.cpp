@@ -5,10 +5,10 @@
 
 int a, b;
 
-void inverter(int& a, int&b){
-    int a2 = a;
-    a = b;
-    b = a2;
+void inverter(int *a, int *b){
+    int a2 = *a;
+    *a = *b;
+    *b = a2;
 }
 
 void imprimir(){
@@ -21,7 +21,7 @@ void inicio(){
     printf("Insira a Variavel B: ");
     scanf("%i", &b);
 
-    inverter(a, b);
+    inverter(&a, &b);
     imprimir();
 }
 

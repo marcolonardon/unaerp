@@ -5,8 +5,8 @@
 
 float valor;
 
-void quadrado(float& valor){
-    valor *= valor;
+void quadrado(float *valor){
+    *valor *= *valor;
 }
 
 void imprimir(){
@@ -16,7 +16,7 @@ void imprimir(){
 void menu(){
     printf("\nInsira o valor a ser modificado: ");
     scanf("%f",&valor);
-    quadrado(valor);
+    quadrado(&valor);
     imprimir();
 }
 
