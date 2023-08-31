@@ -19,6 +19,7 @@ void menu(){
 	printf("Informe seu salario: ");
 	scanf("%f", &salario);
 	calculo(salario);
+	system("pause");
 }
 
 main(){
