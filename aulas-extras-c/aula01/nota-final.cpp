@@ -1,4 +1,4 @@
-/*Algoritmo paara ler a nota parcial e mostrar a nota final mínima que dever conseguirda para aprovação, considerando que prova*/
+/*Algoritmo paara ler a nota parcial e mostrar a nota final mínima que deve ser conseguida para aprovação*/
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -14,7 +14,7 @@ void menu(){
 	printf("Insira a nota parcial: ");
 	scanf("%f", &parcial);
 	system("cls");
-	printf("\nNota necessaria para aprovacao: %.2f\n\n", calculo(parcial) );
+	printf("\nNota necessaria para aprovacao: %.1f\n\n", calculo(parcial) );
 	system("pause");
 }
 
