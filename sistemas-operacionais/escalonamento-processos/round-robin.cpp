@@ -32,7 +32,7 @@ void RoundRobin(Processo processos[], int quantum) {
 }
 
 int main() {
-    Processo processos[] = {{1, 8}, {2, 4}, {3, 2}, {4, 5}, {5, 2}};
+    Processo processos[] = {{1, 78}, {2, 46}, {3, 2}, {4, 15}, {5, 2}};
     int quantum = 2;
 
     RoundRobin(processos, quantum);
