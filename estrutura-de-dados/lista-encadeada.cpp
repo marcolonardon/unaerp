@@ -9,14 +9,14 @@ struct No {
 // Classe Pilha
 class PilhaEstruturada {
 private:
-    No* topo;
+    No* topo;// * Quer dizer que é um vetor
 
 public:
     PilhaEstruturada() : topo(nullptr) {}
 
     // Função para inserir elemento na PilhaEstruturada
     void push(int val) {
-        No* novo_no = new No{val, topo};
+        No* novo_no = new No{val, topo};// topo é o endereço de memória
         topo = novo_no;
     }
 
