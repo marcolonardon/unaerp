@@ -1,9 +1,5 @@
 //Fila
 #include <iostream>
-#include <string>
-//#include <stdio.h>
-
-using namespace std;
 
 struct Carro {
     std::string nome;
@@ -70,8 +66,9 @@ void mostrarMenu() {
     std::cout << "4. Sair" << std::endl;
 }
 
-void menu(){
-	FilaEncadeada fila;
+
+int main() {
+    FilaEncadeada fila;
     int opcao;
     std::string nome;
     std::string modelo;
@@ -85,14 +82,12 @@ void menu(){
         switch (opcao) {
             case 1:
                 std::cout << "Digite o nome: ";
-                //std::cin >> nome;
-                getline(cin, nome);
-                //scanf("%s[^\n]", &nome);
+                std::cin >> nome;
                 std::cout << "Digite a placa: ";
                 std::cin >> placa;
                 std::cout << "Digite o Modelo: ";
-                //std::cin >> modelo;
-                getline(cin, modelo);
+                std::cin >> modelo;
+                fila.adicionar(nome, modelo, placa);
                 break;
             case 2:
                 fila.remover();
@@ -107,11 +102,6 @@ void menu(){
                 std::cout << "Opção invalida!" << std::endl;
         }
     } while (opcao != 4);
-}
-
-int main() {
-    
-    menu();
 
     return 0;
 }
