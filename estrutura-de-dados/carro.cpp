@@ -44,6 +44,8 @@ void menu(){
     FilaEncadeada fila;
     int opcao;
     string nome, modelo, placa;
+    /* No classroom diz nome, marca e modelo, 
+    mas, na aula, o professor disse da placa*/
 
     do {
         mostrarMenu();
