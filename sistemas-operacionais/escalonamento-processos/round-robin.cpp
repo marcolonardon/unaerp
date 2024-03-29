@@ -37,5 +37,7 @@ int main() {
 
     RoundRobin(processos, quantum);
 
+    system("pause");
+
     return 0;
 }

@@ -1,4 +1,10 @@
-//Fila
+/*
+769296 - Jessica Cristina Pretel Maganha
+840347 - Kayky Luiz de Paula Araújo
+839462 - Marco Antônio Lonardon Júnior
+840474 - Matheus Lima Bonadio
+839868 - Vítor Nascimento Moreira
+*/
 #include <iostream>
 
 using namespace std;
@@ -51,37 +57,44 @@ void menu(){
         mostrarMenu();
         cout << "Escolha uma opcao: ";
         cin >> opcao;
+        cin.ignore();
 
         switch (opcao) {
             case 1:
                 if(fila.tamanho < MAX ){
+                    system("cls");
                     cout << "\nDigite o nome: ";
-                    cin.ignore();
                     getline(cin, nome);
                     cout << "Digite a placa: ";
-                    cin >> placa;
-                    cin.ignore();
+                    getline(cin, placa);
                     cout << "Digite o Modelo: ";
                     getline(cin, modelo);
                     fila.adicionar(nome, modelo, placa);
                     fila.tamanho++;
+                    system("cls");
                     cout<<"\n\nVeiculos cadastrados: " << fila.tamanho <<" de " << MAX << endl << endl;   
                 }else{
+                    system("cls");
                     cout<<"\nLimite de cadastros atingido.\n\n";
                 }
                 
                 break;
             case 2:
+                system("cls");
                 fila.remover();
                 fila.tamanho--;
+                cout << "\nCarro Deletado Com Sucesso.\n" << endl;
                 break;
             case 3:
+                system("cls");
                 fila.listar();
                 break;
             case 4:
+                system("cls");
                 cout << "\nSaindo..." << endl;
                 break;
             default:
+                system("cls");
                 cout << "\nOpcao invalida!\n" << endl;
         }
     } while (opcao != 4);
@@ -109,11 +122,16 @@ void FilaEncadeada::adicionar(string nome, string modelo, string placa) {
 
 
 void FilaEncadeada::listar() {
+    int position = 1;
     Carro* atual = frente;
     if(frente != nullptr){
         while (atual != nullptr) {
-            cout << "\n\nNome: " << atual->nome << "\nModelo: " << atual->modelo << "\nplaca: " << atual->placa << endl << endl;
+            cout << "***** Veiculo " << position << " *****\n";
+            cout << "Nome: " << atual->nome << endl;
+            cout << "Modelo: " << atual->modelo << endl;
+            cout << "Placa: " << atual->placa << endl << endl;
             atual = atual->proximo;
+            position++;
         }  
     }else{
         cout << "\nFila Vazia!\n\n";
