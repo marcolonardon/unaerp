@@ -1,0 +1,6 @@
+CREATE USER "nome"
+IDENTIFIED BY "SENHA"
+DEFAULT TABLESPACE "nome do tablespace padrão"
+TEMPORARY TABLESPACE "nome do tablespace temporário"
+ACOUNT [LOCK | UNLOCK]
+QUOTA ON [tamanho | UNLIMITED];
