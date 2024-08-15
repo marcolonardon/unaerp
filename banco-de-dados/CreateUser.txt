@@ -2,5 +2,7 @@ CREATE USER "nome"
 IDENTIFIED BY "SENHA"
 DEFAULT TABLESPACE "nome do tablespace padrão"
 TEMPORARY TABLESPACE "nome do tablespace temporário"
+[TEMP]
 ACOUNT [LOCK | UNLOCK]
+PROFILE "nome do profile" [DEFAULT]
 QUOTA ON [tamanho | UNLIMITED];
