@@ -1,0 +1,16 @@
+Considerando uma plataforma de ensino web, onde os professores podem gerencia material de aula, visualizar, cadastrar, corrigir e excluir tarefas, associar alunos a determinadas disciplinas e criar tópicos e interagir no fórum de discussão. Os alunos podem enviar tarefas, visualizar o material disponibilizado, criar tópicos e interagir no fórum, além de responder ao questionário de avaliação de perfil socioeconômico da UNAERP. Todos usuários podem se logar no site e também recuperar sua senha. Desenvolva um diagrama de casos de uso que satisfaça o escopo.
+
+
+
+Atores  --
+	professores;
+	alunos.
+
+Casos de Uso --
+	Gerenciar material de aula (professor);
+	Gerenciar tarefas (professor);
+	Associar alunos (professor);
+	Gerenciar fórum de discussão (prof e alunos);
+	Enviar tarefas (alunos);
+	Visualizar material (alunos);
+	Logar no site (prof e alunos) <<extend>>- - - - > recuperar senha.
