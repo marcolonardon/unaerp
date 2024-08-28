@@ -1,0 +1,6 @@
+CREATE TABLE "NOME_TABELA"(
+atributo1 tipo1 (tamanho) [UNIQUE | NOT NULL],
+atributo2 tipo2 (tamanho),
+atributo3 tipo3 (tamanho),
+CONSTRAINT "nome" [PRIMARY KEY | FOREIGN KEY | CHECK] parâmetros
+)

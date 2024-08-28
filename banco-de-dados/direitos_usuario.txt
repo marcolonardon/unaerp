@@ -1,0 +1,50 @@
+CREATE USER "5W_839462"
+IDENTIFIED BY "123456"
+DEFAULT TABLESPACE TBLS5w_839462
+TEMPORARY TABLESPACE TEMP
+PROFILE DEFAULT
+ACCOUNT UNLOCK;
+
+GRANT CREATE SESSION, SELECT ANY TABLE, CREATE TABLE, INSERT ANY TABLE, UPDATE ANY TABLE, DELETE ANY TABLE TO "5W_839462";
+
+-- Desconectar e conectar no usuário
+--	DISC e CONN
+
+-- atribuir direitos
+GRANT direito(s)/role TO nome_usuário/ROLE 
+[WITH OPTION ADMIN] -- deixa o usuário dar direitos para outros usuários
+
+-- retirar direitos
+REVOKE direito(s)/role FROM nome_usuário/ROLE
+
+-- Exemplos de direitos de sistema:
+CREATE TABLE
+CREATE SESSION
+CREATE USER
+...
+
+-- Exemplos de direitos de objetos:
+INSERT
+DELETE
+
+
+--CRIAR UM NOVO USER "EX_CODIGO"
+CREATE USER "EX_839462"
+IDENTIFIED BY "123456"
+DEFAULT TABLESPACE TBLS5w_839462
+TEMPORARY TABLESPACE TEMP
+PROFILE DEFAULT
+ACCOUNT UNLOCK;
+
+-- alterar usuário
+ALTER USER "NOME_USUARIO" [PARAMETRO(S)]
+
+-- alterar a senha do user
+ALTER USER "EX_CODIGO" IDENTIFIED BY "NOVA_SENHA"
+
+-- alterar status do user
+ALTER USER "NOME_USER" ACCOUNT LOCK; -- bloqueia o user
+ALTER USER "NOME_USER" ACCOUNT UNLOCK;
+
+-- excluir user
+DROP USER "NOME_USER" [TO CASCADE] -- apaga todos os objetos do usuário e o usuário
