@@ -1,0 +1,57 @@
+PreOrder: Visit(no), PreOrder(esq), PreOrder(dir).
+
+InOrder: InOrder(esq), Visit(no), InOrder(dir).
+
+PosOrder: PosOrder(esq), PosOrder(dir), Visit(no).
+
+
+--------------------------------
+
+		A
+		^
+	       B C
+
+Pre: A,B,C
+In: B,A,C
+Pos: B,C,A
+
+--------------------------------
+
+
+		A
+	       /
+	      B
+
+Pre: A,B
+In: B,A
+Pos: B,A
+
+-------------------------------
+
+		A
+		 \
+		  B
+
+Pre: A,B
+In: A,B
+Pos: B,A
+
+
+////////
+
+Método 1
+pre: traça pela esquerda do nó
+In: traça por baixo do nó
+pos: traça pela direita do nó
+
+
+
+
+
+Pre:    -----------A
+	|--- B     -----C
+	||--D  --E |--F --G
+	|||    |   ||   |
+
+
+Pre: a,b,d,e,c,f,g
