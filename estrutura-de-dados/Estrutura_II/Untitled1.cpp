@@ -46,9 +46,46 @@ void Inserir(Arvore* arvore, int valor) {
     	
 }
 
+
+
+int BuscarRecursao(No* no, int valor){
+	if(no == NULL){
+		return 0;
+	}
+	
+	if(no->dado == valor){
+		return 1;
+	}else if(no->dado > valor){
+		//navegar para esquerda
+		//avanço
+		return BuscarRecursao(no->esquerdo, valor);
+	}else{
+		//navegar para direita
+		//avanço
+		return BuscarRecursao(no->direito, valor);
+	}
+		
+		
+		
+}
+
+int BuscarSemRecursao(Arvore* arvore, int valor){
+	No* atual = arvore->raiz;
+	while(atual != NULL){
+		if(atual->dado == valor){
+			return 1;
+		}else if(atual->dado > valor){
+			atual = atual->esquerdo;
+		}else{
+			atual = atual->direito;
+		}
+	}
+	
+	return 0;
+}
+
 int Buscar(Arvore* arvore, int valor){
-    // completar
-    return 0;
+    return BuscarRecursao(arvore->raiz, valor);
 }
 
 void PrintPreOrderRecursao(No* no) {
