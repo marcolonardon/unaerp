@@ -1,0 +1,3 @@
+-- Alterar registro(s) de uma tabela
+-- Sintaxe:
+	UPDATE NOMETABELA SET ATRIBUTO = NOVOVALOR WHERE CONDIÇÃO

@@ -1,0 +1,45 @@
+-- atribuir direitos: 
+	GRANT DBA TO "5W_839462"
+
+-- o tipo de dado autoincremento não existe no Oracle.
+-- Essa situação é implementado por meio de uma sequence.
+
+-- Sintaxe:
+	CREATE SEQUENCE "nome da sequence"
+	START WITH n
+	INCREMENT BY n 
+	MAXVALUE n
+	MINVALUE n
+	CACHE n (quantidade de valor em cache)
+	CYCLE|NOCYCLE (se a sequência será cíclica ou não)
+
+
+-- manipular sequência
+	CURRVAL -- (current value) mostra o valor atual da sequência (só pode ser usando após a sequence ter sido inicializada)
+	NEXTVAL  -- (next value) incrementa o valor da sequência
+
+
+-- Exemplo:
+	CREATE SEQUENCE SEQFORNECEDOR
+	START WITH 1
+	INCREMENT BY 1
+	MAXVALUE 99999
+	MINVALUE 1
+	CACHE 10
+	NOCYCLE;
+
+	CREATE SEQUENCE SEQPRODUTO
+	START WITH 1
+	INCREMENT BY 1
+	MAXVALUE 999
+	MINVALUE 1
+	CACHE 5
+	NOCYCLE;
+
+
+-- Visualizar sequences
+	SELECT * FROM USER_SEQUENCES;
+
+
+
+	

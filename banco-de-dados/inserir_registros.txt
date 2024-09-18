@@ -1,0 +1,32 @@
+-- Inserir registros em uma tabela
+-- Sintaxe:
+	INSERT INTO NOMETABELA(atributo(s)) VALUES(valor(es);
+
+-- Exemplo:
+	INSERT INTO PRODUTO(COD_PRODUTO, NOM_PRODUTO, DSC_PRODUTO)
+	VALUES(SEQPRODUTO.NEXTVAL, 'Notebook i5', 'Notebooki5 marca X');
+
+	INSERT INTO FORNECEDOR(COD_FORNECEDOR, RAZ_SOCIAL_FORNECEDOR, CNPJ_FORNECEDOR, IE_FORNECEDOR, EMAIL_FORNECEDOR)
+	VALUES(SEQFORNECEDOR.NEXTVAL, 'DELL Computadores', '123145110999', '123456789009', 'vendas@dell.com.br');
+
+
+-- TESTE: SELECT SEQPRODUTO.CURRVAL FROM DUAL;
+
+
+-- Ratificar as transações no banco de dados
+	COMMIT;
+-- Desfazer as transações que ainda não foram ratificadas
+	ROLLBACK;
+
+
+-- Alterar registro(s) de uma tabela
+-- Sintaxe:
+	UPDATE NOMETABELA SET ATRIBUTO = NOVOVALOR WHERE CONDIÇÃO
+
+-- Exemplo:
+	UPDATE PRODUTO SET NOM_PRODUTO = 'Notebook i5 top'
+	WHERE COD_PRODUTO = 1;
+
+
+
+
