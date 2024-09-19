@@ -1,0 +1,69 @@
+SELECT atributos FROM nome tabela
+[WHERE condição(ões) | ORDER BY atributo(s) | GROUP BY atributo | HAVING]
+
+--Funções agregadas
+SUM() -- somatória (somente em atributos do tipo numérico)
+AVG() -- média (somente em atributos do tipo numérico)
+MAX() -- máximo - maior valor
+MIN() -- mínimo - menor valor
+COUNT() -- contagem
+
+
+
+--1) listar o nome dos médicos e seu respectivo salário
+	SELECT NOM_MEDICO || ' ' || SBN_MEDICO Nome,
+	SAL_MEDICO Salario FROM MEDICO;
+
+-- || ' ' || -- CONCATENAR
+
+
+
+--2) Listar o maior salário que um médico recebe 
+	SELECT MAX(SAL_MEDICO) FROM MEDICO;
+
+--3) Mostrar o nome do(s) médico(s) que recebe(m) o maior salário
+	SELECT NOM_MEDICO || ' ' || SBN_MEDICO FROM MEDICO WHERE SAL_MEDICO = (SELECT MAX(SAL_MEDICO) FROM MEDICO);
+
+--4) Mostrar a média salarial dos médicos
+	SELECT AVG(SAL_MEDICO) Media_Salario FROM MEDICO;
+
+--5) Mostrar a quantidade de pacientes cadastrados
+	SELECT COUNT(*) QTD_PACIENTE FROM PACIENTE;
+
+--6) Mostrar a quantidade de pacientes cadastrados que são do estado de SP
+	SELECT COUNT(*) QTD_PACIENTE_SP FROM PACIENTE 
+	WHERE UPPER(UF_PACIENTE) = 'SP'; 
+
+--7) Mostrar a quantidade de pacientes cadastrados por estado 
+	SELECT UF_PACIENTE UF, COUNT(*) QTD_PACIENTE
+	FROM PACIENTE GROUP BY UF_PACIENTE;
+
+--8) Listar o número do exame, a data de realização e o nome do paciente
+	SELECT EL.NUM_EXAME, EL.DTA_EXAME, P.NOM_PACIENTE
+	FROM EXAME_LABORATORIO EL, PACIENTE P
+	WHERE EL.COD_PACIENTE = P.COD_PACIENTE;
+
+--9) Listar o nome dos pacientes que fizeram exames no ano de 2016
+	SELECT P.NOM_PACIENTE Nome
+	FROM PACIENTE P, EXAME_LABORATORIO EX
+	WHERE P.COD_PACIENTE = EX.COD_PACIENTE
+	AND TO_CHAR(EX.DTA_EXAME, 'YYYY') = '2016';
+
+--10) Listar o nome do exame que foi realizado por um paciente atendido em UBDS do estado de SP
+	SELECT E.NOM_EXAME Exame FROM 
+	EXAME_LABORATORIO EL, EXAME E, UBDS U
+	WHERE U.COD_UBDS = EL.COD_UBDS
+	AND EL.COD_EXAME = E.COD_EXAME
+	AND UPPER(U.UF_UBDS) = 'SP';
+
+--10+) Listar o nome do exame e o nome do paciente que realizou exame atendido em UBDS do estado de SP
+	SELECT E.NOM_EXAME, P.NOM_PACIENTE Nome FROM 
+	EXAME_LABORATORIO EL, EXAME E, UBDS U, PACIENTE P
+	WHERE U.COD_UBDS = EL.COD_UBDS
+	AND EL.COD_EXAME = E.COD_EXAME
+	AND UPPER(U.UF_UBDS) = 'SP';
+
+
+
+
+	
