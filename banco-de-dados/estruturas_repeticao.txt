@@ -1,0 +1,80 @@
+-- FOR -> para número determinado de repetições
+--Sintexe:
+	FOR <variável> IN <valor inicial> .. <valor final)
+	LOOP
+	--instruções PL/SQL e SQL
+	END LOOP;
+
+
+
+-- -> para número indeterminado de repetições depende de uma informação
+--Sintaxe:
+	LOOP
+	--instruções PL/SQL e SQL
+	EXIT WHEN <condição>
+	END LOOP;
+
+
+
+-- logar com user 5w
+CREATE TABLE ALUNO(
+ID_ALUNO NUMBER(5),
+NOM_ALUNO VARCHAR(40),
+DTN_ALUNO DATE, 
+CONSTRAINT PK_ALUNO PRIMARY KEY(ID_ALUNO)
+);
+
+
+
+Exemplos: 
+--bloco anônimo utilizando estrutura de repetição
+--boa prática iniciar o nome da variável com V
+
+	DECLARE
+	VI NUMBER(3);
+	BEGIN
+	VI := 1;
+	LOOP
+		INSERT INTO ALUNO VALUES (VI, 'Auno ' || VI, SYSDATE);
+		VI := VI + 1;
+		EXIT WHEN VI > 20;
+	END LOOP;
+	END;
+	/
+
+
+--bloco anônimo utilizando estrutura de repetição (FOR)
+	DECLARE
+	VI NUMBER(3);
+	BEGIN
+	FOR VI IN 21 .. 40
+	LOOP	
+		INSERT INTO ALUNO VALUES (VI, 'Aluno Pós ' || VI, SYSDATE);
+	END LOOP;
+	END;
+	/
+
+
+--Gatilhos (Triggers)
+--são programas PL/SQL que são executados a partir da ocorrência de um evento disparador programado.
+SINTAXE:
+	CREATE [OR REPLACE] TRIGGER "nome do gatilho"
+
+--quando será executado: BEFORE | AFTER
+--evento disparador: INSERT | UPDATE | DELETE
+--identificar o evento disparador (quando necessário): INSERTING | UPDATING | DELETING
+--ON "nome da tabela"
+--execução linha | statement: linha:     a instrução PLSQL será executada linha a linha (FOR EACH ROW)
+			      statement: trata-se de uma única execução
+
+BEGIN
+--instruções PL/SQL
+END;
+
+--Exemplo de declaração de um gatilho
+	CREATE OR REPLACE TRIGGER TESTE
+	AFTER INSERT ON ALUNO 
+	FOR EACH ROW
+	BEGIN
+	--instruções
+	END;
