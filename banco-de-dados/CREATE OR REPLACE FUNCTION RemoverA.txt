@@ -1,0 +1,12 @@
+CREATE OR REPLACE FUNCTION RemoverAcentos(texto varchar) return varchar is 
+	nova varchar2(100);
+begin
+	nova := translate (texto, 'éãçÉÃÇ', 'eacEAC');
+
+	return nova;
+end;
+/
+
+
+
+SELECT REMOVERACENTOS('JOSÉ')FROM DUAL;

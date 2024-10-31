@@ -1,0 +1,13 @@
+CREATE OR REPLACE PROCEDURE p_Soma( p_N1 IN NUMBER, p_N2 IN NUMBER, p_R OUT NUMBER) IS
+BEGIN 
+	p_R := p_N1 + p_N2;
+END;
+/
+
+-- Não pode usar procedure com select
+DECLARE v_resultado NUMBER;
+BEGIN 
+	p_Soma(1, 2, v_resultado); 
+	dbms_output.put_line(v_resultado);
+END;
+/
