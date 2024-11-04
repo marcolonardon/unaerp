@@ -34,16 +34,32 @@ Arvore* CriarArvore(int raiz) {
     return arvore;
 }
 
+void InserirRecursao(No* raiz, int valor){
+    if(valor > raiz->dado){
+        if(raiz->direito == NULL){
+            raiz->direito = CriarNo(valor);
+        }else{
+            InserirRecursao(raiz->direito, valor);
+        }
+    }
+           
+    if(valor < raiz->dado){
+        if(raiz->esquerdo == NULL){
+            raiz->esquerdo = CriarNo(valor);
+        }
+        else{
+            InserirRecursao(raiz->esquerdo, valor);
+        }
+    }
+    
+}
+
 void Inserir(Arvore* arvore, int valor) {
-	if(arvore->raiz->dado <= valor){
-		printf("Entrou para esquerda com valor %i\n", valor);
-		arvore->raiz->esquerdo = CriarNo(valor);
-	}
-    else{
-    	printf("Entrou para direita com valor %i\n", valor);
-    	arvore->raiz->direito = CriarNo(valor);
-	}
-    	
+    if(arvore->raiz == NULL){
+        arvore->raiz = CriarNo(valor);
+    }else{
+        InserirRecursao(arvore->raiz, valor);
+    }
 }
 
 
