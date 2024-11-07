@@ -1,0 +1,75 @@
+CREATE OR REPLACE FUNCTION "nome função" (parâmetro(s) IN | OUT | IN OUT tipo de dados)
+RETURN tipo retorno
+IS/AS
+--declaração das variáveis
+BEGIN
+--instruções PL/SQL
+RETURN "o que será retornado"
+END;
+
+--Para executar um procedimento ou função comando EXECUTE ou EXEC
+EXECUTE NOME_FUNCAO/PROCEDIMENTO(parâmetro(s))
+
+
+--Função SUBSTR() -- permite percorrer uma string
+--Sintaxe:
+	SUBSTR(string, posição inicial, n caracteres a percorrer)
+
+--Ex 1 -- formatar cpf
+	CREATE OR REPLACE FUNCTION FTM_CPF839462 (PCPF IN MEDICO.CPF_MEDICO%TYPE)
+	RETURN VARCHAR2
+	IS
+	VCPF VARCHAR2(14);
+	BEGIN
+	IF (LENGTH(PCPF) = 11) THEN
+		VCPF := SUBSTR(PCPF, 1, 3) || '.' || SUBSTR(PCPF, 4, 3) || '.' || SUBSTR(PCPF, 7, 3) || '-' || SUBSTR(PCPF, 10);
+	ELSE
+		VCPF := 'INCORRETO';
+	END IF;	
+	RETURN VCPF;
+	END; 
+        /
+
+
+
+-- testar
+	SELECT NOM_MEDICO, FTM_CPF839462(CPF_MEDICO) CPF FROM MEDICO;
+
+
+
+
+
+
+-- Atividade
+-- 1 -- Elaborar uma função para retornar a idade das pessoas 
+     -- Entrada: data de nascimento
+     -- Recomendável:
+		-- TRUNC() -- trunca um número
+		-- MONTHS_BETWEEN() -- retorna a diferença em meses entre duas datas
+
+
+	CREATE OR REPLACE FUNCTION IDADE839462 (PDTN IN DATE)
+	RETURN INTEGER
+	IS
+	IDADE INTEGER;
+	BEGIN
+		IDADE := MONTHS_BETWEEN(SYSDATE, PDTN) / 12;
+	RETURN IDADE;
+	END;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
