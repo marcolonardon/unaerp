@@ -1,0 +1,3 @@
+NOSQL -> Não relacional -> Menor segurança -> Armazenamento mais rápido(menor validação)
+
+db.aluno.insert({id_aluno:840000, nom_aluno:'Nome Aluno', dtn_aluno: '10/01/1910'});
