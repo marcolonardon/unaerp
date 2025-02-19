@@ -1,0 +1,52 @@
+PESSOA.Htypedef struct pessoa Pessoa;
+
+Pessoa* criaPessoa(char nome[], int dia, int mes, int ano);
+int calculaIdade(Pessoa* pessoa, int diaAtual, int mesAtual, int anoAtual);
+void ajustaDataNascimento(Pessoa* pessoa, int ano);
+
+
+PESSOA.C
+#include "pessoa.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+typedef struct pessoa {
+    char nome[50];
+    int dia, mes, ano;
+} Pessoa;
+
+Pessoa* criaPessoa(char nome[], int dia, int mes, int ano) {
+    Pessoa* novaPessoa;
+    novaPessoa = (Pessoa*)malloc(sizeof(Pessoa));
+    strcpy(novaPessoa->nome, nome);
+    novaPessoa->dia = dia;
+    novaPessoa->mes = mes;
+    novaPessoa->ano = ano;
+    return novaPessoa;
+}
+
+int calculaIdade(Pessoa* pessoa, int diaAtual, int mesAtual, int anoAtual) {
+    int idade = anoAtual - pessoa->ano - 1;
+    if(mesAtual > pessoa->mes || (mesAtual == pessoa->mes && diaAtual >= pessoa->dia)) {
+        idade++;
+    }
+    return idade;
+}
+
+void ajustaDataNascimento(Pessoa* pessoa, int ano) {
+    pessoa->ano = ano;
+}
+
+MAIN.C
+#include <stdio.h>
+#include "pessoa.h"
+
+int main()
+{
+    Pessoa* newton = criaPessoa("Isaac Newton", 4, 1, 1643);
+    ajustaDataNascimento(newton, 2000);
+    printf("Hello World Idade é: %d", calculaIdade(newton, 6, 2, 2025));
+
+    return 0;
+}

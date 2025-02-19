@@ -1,0 +1,57 @@
+Transponha o seguinte código em C (Paradigma Estruturado) para Java (Paradigma Orientado a Objetos). Entregar todo o código em um único arquivo doc ou txt.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    int id;
+    char* nome;
+    float valor;
+} Conta;
+
+
+Conta* criarConta(int id, char nome[], float valor) {
+    Conta* novaConta = malloc(sizeof(Conta));
+    novaConta->id = id;
+    novaConta->nome = nome;
+    novaConta->valor = valor;
+    return novaConta;
+}
+
+void depositar (Conta* conta, float valor) {
+    conta->valor += valor;
+}
+
+void sacar (Conta* conta, float valor) {
+    if(conta->valor < valor) {
+        printf("Saldo insuficiente");
+        return;
+    }
+
+    conta->valor -= valor;
+}
+
+void transferir(Conta* conta_de, Conta* conta_para, float valor) {
+    if(conta_de->valor < valor) {
+        printf("Saldo insuficiente");
+        return;
+    }
+    sacar(conta_de, valor);
+    depositar(conta_para, valor);
+}
+
+int main()
+{
+    Conta* conta1 = criarConta(1, "Bruno", 1200);
+    Conta* conta2 = criarConta(2, "Pedro", 500);
+
+    sacar(conta1, 200);
+    depositar(conta2, 300);
+    transferir(conta1, conta2, 100);
+
+    printf("Valor da conta do %s é %f", conta1->nome, conta1->valor);
+    printf("Valor da conta do %s é %f", conta2->nome, conta2->valor);
+
+    return 0;
+}
