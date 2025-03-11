@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d0a61ab-9135-4810-9495-0443b8117867" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Conta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ContaCorrente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ContaPoupanca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/.idea/ContaCeContaP.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/untitled/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/untitled/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/untitled/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/untitled/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/untitled/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ContaCeContaP/untitled/src/main/java/unaerp/Conta.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Especializacao-Generalizacao/src/unaerp/Caminhao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Especializacao-Generalizacao/src/unaerp/Onibus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Especializacao-Generalizacao/src/unaerp/Veiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2txwu6zyW3AhdlQ0iH6vSOPaRDk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,7 +39,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/839462/Documents/GitHub/unaerp/programacao-orientada-objeto/ContaCeContaP/untitled",
+    "last_opened_file_path": "C:/Users/839462/Documents/GitHub/unaerp/programacao-orientada-objeto/atividade",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,6 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741307255075</updated>
       <workItem from="1741307256083" duration="2014000" />
+      <workItem from="1741734304694" duration="791000" />
     </task>
     <servers />
   </component>
