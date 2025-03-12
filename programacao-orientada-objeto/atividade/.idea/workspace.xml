@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d0a61ab-9135-4810-9495-0443b8117867" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Especializacao-Generalizacao/src/unaerp/Caminhao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Especializacao-Generalizacao/src/unaerp/Onibus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Especializacao-Generalizacao/src/unaerp/Veiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8d0a61ab-9135-4810-9495-0443b8117867" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +34,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/839462/Documents/GitHub/unaerp/programacao-orientada-objeto/atividade",
+    "last_opened_file_path": "C:/Users/839462/Documents/GitHub/unaerp/programacao-orientada-objeto/Especializacao-Generalizacao",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,6 +53,7 @@
       <updated>1741307255075</updated>
       <workItem from="1741307256083" duration="2014000" />
       <workItem from="1741734304694" duration="791000" />
+      <workItem from="1741738499346" duration="429000" />
     </task>
     <servers />
   </component>
