@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script language="Javascript">
+			function semfoco() {
+				window.alert("O campo EMAIL perdeu o foco");
+			}
+		</script>
+	</head>
+	<body>
+		<h3>Evento OnBlur</h3>
+		<form>
+			<pre>
+Nome: <input id="nome" type="text">
+Email: <input id="email" type="text" onblur="semfoco()">
+Telefone: <input id="telefone" type="text">
+			</pre>
+		</form>
+	</body>
+</html>

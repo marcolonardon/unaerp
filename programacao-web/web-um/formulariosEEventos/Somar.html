@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Soma</title>
+  <script>
+    function somar() {
+      let n1 = parseFloat(document.getElementById("num1").value);
+      let  n2 = parseFloat(document.getElementById("num2").value);
+      let resultado = n1 + n2;
+      document.getElementById("resultado").textContent = "Resultado: " + resultado;
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="event.preventDefault(); somar();">
+    Número 1: <input type="number" id="num1"><br>
+    Número 2: <input type="number" id="num2"><br>
+    <input type="submit" value="Somar">
+  </form>
+  <p id="resultado"></p>
+</body>
+</html>

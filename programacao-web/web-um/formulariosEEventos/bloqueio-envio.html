@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validação de Formulário</title>
+  <script>
+    function validarFormulario() {
+      let nome = document.getElementById("nome").value;
+      if (nome === "") {
+        alert("Por favor, preencha o campo nome.");
+        return false; // impede o envio
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validarFormulario()">
+    Nome: <input type="text" id="nome" name="nome"><br>
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script language="javascript">
+			function mudou1() {
+				document.form1.completo.value = document.form1.nome.value;
+			}
+			function mudou2() {
+				document.form1.completo.value = document.form1.completo.value + " " +
+					document.form1.sobrenome.value;
+			}
+		</script>
+	</head>
+	<body>
+		<h3>Evento OnChange</h3>
+		<form name=form1>
+			<pre>
+Nome: <input name="nome" type="text" onchange="mudou1()">
+Sobrenome: <input name="sobrenome" type="text" onchange="mudou2()">
+Nome completo: <input name="completo" type="text" readonly>
+			</pre>
+		</form>
+	</body>
+</html>
