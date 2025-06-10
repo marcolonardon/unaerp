@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplos HTML + CSS Inline + JavaScript</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 40px;">
+
+  <!-- Exemplo 1: Mudar cor do texto -->
+  <section style="margin-bottom: 40px;">
+    <h2>1. Mudar Cor do Texto</h2>
+    <h3 id="titulo" style="color: blue;">Olá, mundo!</h3>
+    <button 
+      onclick="document.getElementById('titulo').style.color = 'red';"
+      style="padding: 10px; background-color: yellow; font-size: 16px;">
+      Mudar Cor
+    </button>
+  </section>
+
+  <!-- Exemplo 2: Contador -->
+  <section style="margin-bottom: 40px;">
+    <h2>2. Contador</h2>
+    <h3 id="contador" style="font-size: 40px;">0</h3>
+    <button 
+      onclick="document.getElementById('contador').innerText++"
+      style="padding: 10px 20px; background-color: lightgreen; font-size: 20px;">
+      +
+    </button>
+    <button 
+      onclick="document.getElementById('contador').innerText--"
+      style="padding: 10px 20px; background-color: lightcoral; font-size: 20px;">
+      -
+    </button>
+  </section>
+
+  <!-- Exemplo 3: Mostrar/Ocultar -->
+  <section style="margin-bottom: 40px;">
+    <h2>3. Mostrar/Ocultar Parágrafo</h2>
+    <p id="paragrafo" style="display: none; color: green;">Este é um parágrafo escondido.</p>
+    <button 
+      onclick="let p = document.getElementById('paragrafo'); p.style.display = p.style.display === 'none' ? 'block' : 'none';"
+      style="padding: 10px; background-color: orange;">
+      Mostrar/Ocultar
+    </button>
+  </section>
+
+  <!-- Exemplo 4: Validação de formulário -->
+  <section style="margin-bottom: 40px;">
+    <h2>4. Validação de Formulário</h2>
+    <input 
+      type="text" 
+      id="nome" 
+      placeholder="Digite seu nome" 
+      style="padding: 10px; border: 1px solid gray;">
+    <button 
+      onclick="validarNome()"
+      style="padding: 10px; background-color: skyblue;">
+      Enviar
+    </button>
+    <p id="mensagem" style="color: red;"></p>
+  </section>
+
+  <!-- Exemplo 5: Relógio Digital -->
+  <section style="margin-bottom: 40px;">
+    <h2>5. Relógio Digital</h2>
+    <h1 id="relogio" style="font-size: 50px; color: navy;"></h1>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Exemplo 4: Validação
+    function validarNome() {
+      const nome = document.getElementById('nome').value;
+      const msg = document.getElementById('mensagem');
+
+      if (nome.trim() === '') {
+        msg.innerText = 'Por favor, preencha o nome.';
+        msg.style.color = 'red';
+      } else {
+        msg.innerText = 'Nome válido!';
+        msg.style.color = 'green';
+      }
+    }
+
+    // Exemplo 5: Relógio digital
+    function atualizarRelogio() {
+      const agora = new Date();
+      const hora = agora.toLocaleTimeString();
+      document.getElementById('relogio').innerText = hora;
+    }
+
+    setInterval(atualizarRelogio, 1000);
+    atualizarRelogio();
+  </script>
+
+</body>
+</html>

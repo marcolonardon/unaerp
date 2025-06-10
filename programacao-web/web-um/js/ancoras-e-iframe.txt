@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo com Âncoras e Iframe</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 30px;">
+
+  <h1 style="text-align: center;">Navegação com Âncoras e Iframe</h1>
+
+  <!-- Menu de Navegação -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <a href="https://www.example.com" target="meuIframe" style="margin-right: 15px;">Site Exemplo</a>
+    <a href="https://pt.wikipedia.org" target="meuIframe" style="margin-right: 15px;">Wikipedia</a>
+    <a href="#sobre" style="margin-right: 15px;">Ir para seção Sobre</a>
+  </div>
+
+  <!-- Iframe -->
+  <iframe 
+    name="meuIframe" 
+    src="https://www.example.com" 
+    style="width: 100%; height: 400px; border: 1px solid #ccc; margin-bottom: 30px;">
+  </iframe>
+
+  <!-- Conteúdo com âncora -->
+  <h2 id="sobre" style="color: darkblue;">Seção: Sobre este exemplo</h2>
+  <p>
+    Este é um exemplo simples demonstrando como usar <strong>âncoras</strong> para navegar dentro da mesma página, 
+    e como usar um <strong>iframe</strong> para carregar outros sites ou páginas HTML sem sair do arquivo principal.
+  </p>
+
+  <p>
+    O conteúdo do iframe pode ser alterado clicando nos links acima, graças ao atributo <code>target="meuIframe"</code>.
+  </p>
+
+  <!-- Link para voltar ao topo -->
+  <p><a href="#" style="color: green;">Voltar ao topo</a></p>
+
+</body>
+</html>

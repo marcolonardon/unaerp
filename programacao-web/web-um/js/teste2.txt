@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário com Validação</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto;">
+
+  <h2 style="text-align: center;">Formulário de Contato</h2>
+
+  <form id="formContato" onsubmit="enviarFormulario(event)" style="display: flex; flex-direction: column; gap: 15px;">
+
+    <label>
+      Nome:
+      <input 
+        type="text" 
+        id="nome" 
+        style="width: 100%; padding: 8px; border: 1px solid #ccc;">
+    </label>
+
+    <label>
+      E-mail:
+      <input 
+        type="email" 
+        id="email" 
+        style="width: 100%; padding: 8px; border: 1px solid #ccc;">
+    </label>
+
+    <label>
+      Mensagem:
+      <textarea 
+        id="mensagem" 
+        rows="4"
+        style="width: 100%; padding: 8px; border: 1px solid #ccc;"></textarea>
+    </label>
+
+    <button 
+      type="submit"
+      style="padding: 10px; background-color: green; color: white; font-size: 16px;">
+      Enviar
+    </button>
+
+    <p id="resposta" style="color: red;"></p>
+  </form>
+
+  <script>
+    function enviarFormulario(event) {
+      event.preventDefault(); // Impede envio padrão
+
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+      const resposta = document.getElementById('resposta');
+
+      if (!nome || !email || !mensagem) {
+        resposta.style.color = 'red';
+        resposta.innerText = 'Por favor, preencha todos os campos.';
+        return;
+      }
+
+      if (!email.includes('@') || !email.includes('.')) {
+        resposta.style.color = 'red';
+        resposta.innerText = 'E-mail inválido.';
+        return;
+      }
+
+      resposta.style.color = 'green';
+      resposta.innerText = 'Mensagem enviada com sucesso!';
+
+      // Simula "envio" e limpa o formulário
+      setTimeout(() => {
+        document.getElementById('formContato').reset();
+        resposta.innerText = '';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
