@@ -1,0 +1,7 @@
+XAMPP Control Panel
+
+Iniciar apache
+
+Criar repositório em C:\xampp\htdocs e colocar os códigos dentro
+
+Abrir no navegador: http://localhost/meuRepositorio/arquivo.html

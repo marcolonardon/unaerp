@@ -1,0 +1,39 @@
+Observações sobre como inserir arquivos de funções em programas php
+Podem ser utilizados 4 comandos clássicos:
+* include
+* include_once
+* require
+* require_once
+
+include:
+  A função include inclui e avalia o arquivo especificado. 
+  Se o arquivo não puder ser incluído, o PHP gerará um aviso, 
+  mas o script continuará a execução. Ex:
+arquivo1.php
+<?php
+echo "Este é o arquivo1.";
+?>
+
+principal.php
+<?php
+include 'arquivo1.php';
+echo "Este é o arquivo principal.";
+?>
+
+include_once:
+  A função include_once funciona da mesma maneira que include, 
+  com a diferença de que verifica se o arquivo já foi incluído e,
+  se já, não o inclui novamente. Assim evita inclusões duplicadas.
+
+
+
+require
+A diferença entre include é que, se o arquivo não puder ser incluído, 
+  o PHP gerará um erro fatal e interromperá a execução do script.
+  Usar em casos críticos onde o script depende do arquivo incluído.
+
+
+require_once
+  A função require_once funciona da mesma maneira que require,
+  com a diferença de que verifica se o arquivo já foi incluído e,
+  se já, não o inclui novamente. Assim evita inclusões duplicada.
