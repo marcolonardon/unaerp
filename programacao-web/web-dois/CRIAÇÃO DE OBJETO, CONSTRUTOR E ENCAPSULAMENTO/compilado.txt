@@ -1,0 +1,193 @@
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+PROGRAMAÇÃO ORIENTADA A OBJETO
+///////////////////////////////////////////////////////////////////////////////////////
+
+/*
+ * CRIAÇÃO DE OBJETO, CONSTRUTOR E ENCAPSULAMENTO
+ */
+// Arquivo Carro.php
+<?php
+class Carro {
+    private $marca;
+    private $modelo;
+    private $ano;
+
+    public function __construct($marca, $modelo, $ano) {
+        $this->marca = $marca;
+        $this->modelo = $modelo;
+        $this->ano = $ano;
+    }
+
+    public function obterDescricao() {
+        return "Carro: $this->marca $this->modelo, Ano: $this->ano\n";
+    }
+
+    public function getMarca() {
+        return $this->marca;
+    }
+
+    public function setMarca($marca) {
+        $this->marca = $marca;
+    }
+}
+
+// Criando um objeto da classe Carro
+$meuCarro = new Carro("Toyota", "Corolla", 2024);
+echo $meuCarro->obterDescricao();
+
+$meuCarro->setMarca("Honda");
+echo $meuCarro->getMarca();
+?>
+////////////////
+
+/*
+HERANÇA E ACESSO A SUPERCLASSE
+*/
+
+<?php
+class Veiculo {
+    public $marca;
+    public $modelo;
+
+    public function __construct($marca, $modelo) {
+        $this->marca = $marca;
+        $this->modelo = $modelo;
+    }
+
+    public function obterDescricao() {
+        return "Veículo: $this->marca $this->modelo";
+    }
+}// Fim da classe genérica
+
+class Carro extends Veiculo {
+    private $ano;
+
+    public function __construct($marca, $modelo, $ano) {
+        parent::__construct($marca, $modelo);
+        $this->ano = $ano;
+    }
+
+    public function obterDescricao() {
+        return parent::obterDescricao() . ", Ano: $this->ano";
+    }
+} // fim da classe especializada.
+
+// Criando um objeto da classe Carro
+$meuCarro = new Carro("Honda", "Civic", 2018);
+echo $meuCarro->obterDescricao();
+?>
+//////////////////////////////////////////
+/*
+POLIMORFISMO
+*/
+<?php
+class Animal {
+    public function fazerSom() {
+        echo "O animal faz um som\n";
+    }
+}
+
+class Cachorro extends Animal {
+    public function fazerSom() {
+        echo "O cachorro late\n";
+    }
+}
+
+class Gato extends Animal {
+    public function fazerSom() {
+        echo "O gato mia\n";
+    }
+}
+
+function emitirSom(Animal $animal) {
+    $animal->fazerSom();
+}
+
+$dog = new Cachorro();
+$cat = new Gato();
+
+emitirSom($dog);
+emitirSom($cat);
+emitirsom (new Animal());
+?>
+////////////////////////////////////////////
+/* 
+VARIÁVEIS E MÉTODOS DE CLASSE
+*/
+
+<?php
+class Calculadora {
+    public static $contador = 0;
+
+    public static function somar($a, $b) {
+       Calculadora::$contador++;
+        return $a + $b;
+    }
+}
+
+echo "Usos da Calculadora: " . Calculadora::$contador . "\n";
+echo "Soma: " . Calculadora::somar(5, 10). "\n";
+echo "Soma: " . Calculadora::somar(5, 11). "\n";
+echo "Soma: " . Calculadora::somar(5, 12). "\n";
+echo "Usos da Calculadora: " . Calculadora::$contador . "\n";
+?>
+
+////////////////////////////////////////////
+
+INTERFACES
+///////////////////////////////////////////////
+
+/*
+
+Uso de interfaces
+*/
+
+<?php
+interface FormaGeometrica {
+    public function calcularArea();
+}
+
+
+class Quadrado implements FormaGeometrica {
+    private $lado;
+
+    public function __construct($lado) {
+        $this->lado = $lado;
+    }
+
+    public function calcularArea() {
+        return $this->lado * $this->lado;
+    }
+}
+
+class Circulo implements FormaGeometrica {
+    private $raio;
+
+    public function __construct($raio) {
+        $this->raio = $raio;
+    }
+
+    public function calcularArea() {
+        return pi() * $this->raio * $this->raio;
+    }
+}
+
+
+
+
+function exibirArea(FormaGeometrica $forma) {
+    //echo "A área é: " . $forma->calcularArea() . "\n";
+    printf ("A area  é: %.2f\n", $forma->calcularArea());
+}
+
+$quadrado = new Quadrado(4);
+$circulo = new Circulo(3);
+
+exibirArea($quadrado); // Saída: A área é: 16
+exibirArea($circulo);  // Saída: A área é: 28.27 (aproximadamente)
+
+
+
+?>
+////////////////////////////////////////////////////////////////
