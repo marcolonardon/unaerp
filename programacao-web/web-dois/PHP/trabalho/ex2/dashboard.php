@@ -11,7 +11,6 @@ $username = $_SESSION['username'];
 $safe = htmlspecialchars($username, ENT_QUOTES, 'UTF-8');
 $data = get_user_registration($username);
 
-// função simples para verificar se a seção está preenchida
 function section_filled($arr) {
     if (!is_array($arr)) return false;
     foreach ($arr as $v) {
